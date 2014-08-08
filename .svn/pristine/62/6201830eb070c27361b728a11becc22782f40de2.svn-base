@@ -1,0 +1,42 @@
+package demo.test;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import webdriver.BaseTest;
+import demo.test.forms.onlinerMainForm;
+
+public class onlinerBookmarksTest extends BaseTest {
+
+    private String login;
+    private String password;
+    private String searchText1;
+    @BeforeTest
+    @Parameters({"login","password","searchText1"})
+    public void readParams(String login, String password, String searchText1) throws Throwable {
+        this.login = login;
+        this.password = password;
+        this.searchText1 = searchText1;
+    }
+    @Override
+    public void runTest() {
+        logger.step(1);
+        browser.navigate("http://www.onliner.by");
+        logger.step(2);
+        onlinerMainForm omf = new onlinerMainForm();
+        omf.assertLogo();
+        logger.step(3);
+        omf.login(login,password);
+        logger.step(4);
+        omf.searchInCatalog(searchText1);
+        logger.step(5);
+        omf.openSearch();
+        logger.step(6);
+        omf.makeBookmark();
+        browser.waitForPageToLoad();
+        logger.step(7);
+        omf.assertBookmark();
+        logger.step(8);
+        omf.deleteBookmark();
+
+    }
+}

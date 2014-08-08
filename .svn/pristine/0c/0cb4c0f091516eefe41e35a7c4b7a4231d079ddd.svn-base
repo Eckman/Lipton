@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Demo Test Plan" verbose="1">
+	
+	<test name="Login test" preserve-order="true">
+		<classes>
+            <class name="demo.test.onlinerLoginTest" />
+        </classes>
+	</test>
+
+
+    <test name="Catalog Search test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerCatalogSearchTest" />
+        </classes>
+    </test>
+
+    <test name="Baraholka Search test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerBaraholkaSearchTest" />
+        </classes>
+    </test>
+
+    <test name="Forum Search test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerForumSearchTest" />
+        </classes>
+    </test>
+
+    <test name="News Search test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerNewsSearchTest" />
+        </classes>
+    </test>
+
+    <test name="Main links test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerMainLinksTest" />
+        </classes>
+    </test>
+
+    <test name="Bookmarks test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerBookmarksTest" />
+        </classes>
+    </test>
+
+    <parameter name="login"  value="rbhbokka"/>
+    <parameter name="password"  value="430943ll"/>
+
+    <parameter name="searchText1" value="iPhone"/>
+
+
+
+
+</suite>

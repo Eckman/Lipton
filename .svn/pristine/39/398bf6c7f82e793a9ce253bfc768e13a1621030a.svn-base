@@ -1,0 +1,6 @@
+package demo.test;
+
+import demo.test.forms.catalogForm;
+
+public class catalogTest {
+}

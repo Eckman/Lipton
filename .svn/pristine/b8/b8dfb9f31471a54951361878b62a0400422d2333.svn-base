@@ -1,0 +1,23 @@
+package demo.test;
+
+import webdriver.BaseTest;
+import demo.test.forms.onlinerMainForm;
+
+public class onlinerSearchTest extends BaseTest {
+
+
+    public void runTest() {
+
+        logger.step(1);
+        browser.navigate("http://onliner.by");
+        logger.step(2);
+        onlinerMainForm omf = new onlinerMainForm();
+        omf.assertLogo();
+
+
+
+    }
+
+
+
+}

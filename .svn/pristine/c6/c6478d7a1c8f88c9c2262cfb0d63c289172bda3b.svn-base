@@ -1,0 +1,22 @@
+package demo.test;
+import webdriver.BaseTest;
+import demo.test.forms.onlinerMainForm;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+public class onlinerAutoAdd extends BaseTest{
+
+    private String login;
+    private String password;
+    @BeforeTest
+    @Parameters({"login","password"})
+    public void readParams(String login, String password) throws Throwable {
+        this.login = login;
+        this.password = password;
+    }
+
+    @Override
+    public void runTest() {
+        browser.navigate("http://ab.onliner.by/add");
+
+    }
+}

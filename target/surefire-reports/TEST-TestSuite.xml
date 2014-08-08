@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="274.059" tests="10" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\bin"/>
+    <property name="java.vm.version" value="24.45-b08"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\comp\Desktop\projectqa"/>
+    <property name="java.runtime.version" value="1.7.0_45-b18"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\comp\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="maven.ext.class.path" value="C:\Users\comp\AppData\Roaming\NetBeans\7.4\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Users\comp\AppData\Roaming\NetBeans\7.4\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\bin;C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\bin64;C:\Program Files (x86)\CollabNet;C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\bin;C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\bin64;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Rational\common;C:\Program Files\Java\jdk1.7.0_45\bin;C:\Ruby193\bin;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\comp"/>
+    <property name="user.timezone" value="Europe/Kaliningrad"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="user.name" value="comp"/>
+    <property name="java.class.path" value="C:\Users\comp\AppData\Roaming\NetBeans\7.4\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_45\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Users\comp\AppData\Roaming\NetBeans\7.4\maven-nblib\netbeans-eventspy.jar clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="ru"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_45"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_45\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\comp\AppData\Roaming\NetBeans\7.4\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="xTest" classname="demo.test.onlinerLoginTest" time="20.27"/>
+  <testcase name="xTest" classname="demo.test.onlinerCatalogSearchTest" time="45.644">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at webdriver.elements.BaseElement.waitForIsElementPresent(BaseElement.java:181)
+	at webdriver.elements.BaseElement.getText(BaseElement.java:253)
+	at demo.test.forms.onlinerMainForm.searchAssertCatalog(onlinerMainForm.java:218)
+	at demo.test.onlinerCatalogSearchTest.runTest(onlinerCatalogSearchTest.java:26)
+</failure>
+    <system-out><![CDATA[19:50:37,570  INFO - driver.quit...
+19:50:41,484  INFO - browser driver was constructed
+19:50:41,484  INFO - Browser 'firefox' ready...
+19:50:41,531  INFO - --------------------------------------------------------------------------------------------
+19:50:41,532  INFO - =====================  Test case: 'demo.test.onlinerCatalogSearchTest' =====================
+19:50:41,532  INFO - --------------------------------------------------------------------------------------------
+19:50:41,532  INFO - --------==[ Preconditions ]==--------
+19:50:41,532  INFO - --------==[ Step 1 ]==--------
+19:50:54,656  INFO - --------==[ Step 2 ]==--------
+19:50:54,765  INFO - Form 'My onlIner form' appears in 108msec
+19:50:54,817  INFO - --------==[ Step 3 ]==--------
+19:50:56,193  INFO - Button 'catalog' :: Clicking
+19:50:56,498  INFO - Text Field 'search bar' :: Typing 'iPhone'
+19:50:56,623  INFO - Button 'search bar button' :: Clicking
+19:50:56,725  INFO - --------==[ Step 4 ]==--------
+19:51:27,164  WARN - 
+19:51:27,164  WARN - >>>>>>>> TEST FAILED <<<<<<<<
+19:51:27,164  WARN - 
+]]></system-out>
+  </testcase>
+  <testcase name="xTest" classname="demo.test.onlinerBaraholkaSearchTest" time="19.304"/>
+  <testcase name="xTest" classname="demo.test.onlinerForumSearchTest" time="17.543"/>
+  <testcase name="xTest" classname="demo.test.onlinerNewsSearchTest" time="22.002"/>
+  <testcase name="xTest" classname="demo.test.onlinerMainLinksTest" time="61.569"/>
+  <testcase name="xTest" classname="demo.test.onlinerBookmarksTest" time="25.821"/>
+  <testcase name="xTest" classname="demo.test.onlinerCommentTest" time="19.804">
+    <failure message="Error communicating with the remote browser. It may have died.&#10;Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;&#10;System info: host: &apos;comp-ПК&apos;, ip: &apos;192.168.1.44&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'comp-ПК', ip: '192.168.1.44', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_45'
+Driver info: driver.version: RemoteWebDriver
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:319)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:298)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:165)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:362)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:291)
+	at webdriver.Browser.getLocation(Browser.java:248)
+	at demo.test.forms.onlinerMainForm.openPeople(onlinerMainForm.java:151)
+	at demo.test.onlinerCommentTest.runTest(onlinerCommentTest.java:29)
+</failure>
+    <system-out><![CDATA[19:54:13,365  INFO - driver.quit...
+19:54:17,658  INFO - browser driver was constructed
+19:54:17,659  INFO - Browser 'firefox' ready...
+19:54:17,706  INFO - --------------------------------------------------------------------------------------
+19:54:17,706  INFO - =====================  Test case: 'demo.test.onlinerCommentTest' =====================
+19:54:17,706  INFO - --------------------------------------------------------------------------------------
+19:54:17,706  INFO - --------==[ Preconditions ]==--------
+19:54:17,706  INFO - --------==[ Step 1 ]==--------
+19:54:29,831  INFO - --------==[ Step 2 ]==--------
+19:54:29,957  INFO - Form 'My onlIner form' appears in 125msec
+19:54:30,052  INFO - Text Field 'Login box' :: Typing 'e.solovey'
+19:54:30,235  INFO - Text Field 'password box' :: Clicking
+19:54:30,437  INFO - Text Field 'Password box' :: Typing '123456'
+19:54:30,561  INFO - Button 'Sign in' :: Clicking
+19:54:33,883  INFO - --------==[ Step 3 ]==--------
+19:54:33,963  INFO - Button 'peoples' :: Clicking
+19:54:36,497  WARN - Page loading timed out
+19:54:37,498  WARN - 
+19:54:37,499  WARN - >>>>>>>> TEST FAILED <<<<<<<<
+19:54:37,499  WARN - 
+]]></system-out>
+  </testcase>
+  <testcase name="xTest" classname="demo.test.onlinerStatusTest" time="18.887"/>
+  <testcase name="xTest" classname="demo.test.onlinerUserParameters" time="23.215"/>
+</testsuite>

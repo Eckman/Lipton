@@ -1,0 +1,56 @@
+package demo.test.forms;
+
+import org.openqa.selenium.By;
+import webdriver.elements.Button;
+import webdriver.elements.TextBox;
+import webdriver.elements.Label;
+import webdriver.BaseForm;
+
+public class onlinerMainForm extends BaseForm{
+
+    private static String formlocator="//body";
+    private TextBox searchBox = new TextBox(By.id("g-search-input"));
+    private Button searchButton = new Button(By.className("top-search-button"));
+    private Button searchCatalogBtn = new Button(By.xpath("//ul[@class='b-top-search-tabs']/li[1]")); //не вестись на класс 'active bttn', он меняется
+    private Button searchBaraholkaBtn = new Button(By.xpath("//ul[@class='b-top-search-tabs']/li[2]"));
+    private Button searchForumBtn = new Button(By.xpath("//ul[@class='b-top-search-tabs']/li[3]"));
+    private Button searchNewsBtn = new Button(By.xpath("//ul[@class='b-top-search-tabs']/li[4]"));
+    private Button catalogButton = new Button(By.xpath(".//ul[@class='b-main-navigation']/li[contains(.,'Каталог и цены')]"));
+    private Button baraholkaButton = new Button(By.xpath(".//ul[@class='b-main-navigation']/li[contains(.,'Барахолка')]"));
+    private Button mainNewButton = new Button(By.className("b-tile m-2x2 m-news m-blue"));
+    private Label mainLogo = new Label(By.className("b-top-logo"));
+
+
+    public void assertLogo(){
+        assert(mainLogo.isPresent());
+    }
+
+    public void searchInCatalog(String text) {
+        searchCatalogBtn.click();
+        searchBox.type(text);
+        searchButton.click();
+    }
+
+    public void searchInBar(String text) {
+        searchBaraholkaBtn.click();
+        searchBox.type(text);
+        searchButton.click();
+    }
+
+    public void searchInForum(String text) {
+        searchForumBtn.click();
+        searchBox.type(text);
+        searchButton.click();
+    }
+
+    public void searchInNews(String text) {
+        searchNewsBtn.click();
+        searchBox.type(text);
+        searchButton.click();
+    }
+
+    public onlinerMainForm() {
+        super(By.xpath(formlocator), "My onlIner form");
+    }
+
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Demo Test Plan" verbose="1">
+
+
+
+    <test name="User Parameters test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerUserParameters" />
+        </classes>
+    </test>
+
+    <parameter name="login"  value="rbhbokka"/>
+    <parameter name="password"  value="430943ll"/>
+
+    <parameter name="searchText1" value="iPhone"/>
+
+    <parameter name="testTextComment" value="борода, хоккей, картошка"/>
+
+    <parameter name="city"  value="Минск"/>
+    <parameter name="occupation"  value="IT"/>
+    <parameter name="interests"  value="скейтбординг"/>
+    <parameter name="jabber"  value="rbhbokka@xdsl.by"/>
+    <parameter name="site"  value="http://onliner.by"/>
+
+
+
+
+</suite>

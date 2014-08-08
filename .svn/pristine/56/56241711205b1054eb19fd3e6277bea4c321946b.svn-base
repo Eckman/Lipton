@@ -1,0 +1,23 @@
+package demo.test.forms;
+
+import org.openqa.selenium.By;
+import webdriver.elements.Button;
+import webdriver.elements.TextBox;
+import webdriver.elements.Label;
+import webdriver.BaseForm;
+
+public class catalogForm extends BaseForm{
+    private static String formlocator="//body";
+    private Button cell = new Button(By.linkText("Мобильные телефоны"));
+    private Button cellManufDropBox = new Button(By.id("lmfr0"), "cell phone manufacturer");
+    private Button cellManuf = new Button(By.xpath("//*[@id='lmfr0']/option[contains(.,'')]"), "Dfgdfg");
+    public void openCellPhones()    {
+        cell.click();
+    }
+
+
+    public catalogForm() {
+        super(By.xpath(formlocator), "My onlIner form");
+    }
+
+}

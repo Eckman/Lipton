@@ -1,0 +1,242 @@
+package demo.test.forms;
+
+import org.openqa.selenium.By;
+import webdriver.elements.Button;
+import webdriver.elements.TextBox;
+import webdriver.elements.Label;
+import webdriver.BaseForm;
+
+
+//использовал одну форму для всех тестов, потому что некоторые тесты используют одни и те же методы
+
+
+public class onlinerMainForm extends BaseForm{
+//поисковые локаторы
+    private static String formlocator="//body";
+    private TextBox searchBox = new TextBox(By.id("g-search-input"),"search bar");
+    private Button searchButton = new Button(By.className("top-search-button"),"search bar button");
+    private Button searchCatalogBtn = new Button(By.linkText("Каталог и цены"));
+    private Button searchBaraholkaBtn = new Button(By.linkText("Барахолка"));
+    private Button searchForumBtn = new Button(By.linkText("Форум"));
+    private Button searchNewsBtn = new Button(By.linkText("Новости и статьи"));
+//локаторы верхних кнопок в поиске
+    private Label searchResultCatalog = new Label(By.xpath("//strong[@class='pname']/a"));
+    private Label searchResultBaraholka = new Label(By.xpath("//tr[@class='m-imp']"));
+    private Label searchResultForum = new Label(By.xpath("//h1[@class='m-title']/span[contains(.,'найдено')]"));
+    private Label searchResultNews = new Label(By.xpath("//header[@class='b-search-results-header']/small[contains(.,'найдено')]"));
+//локаторы основных ссылок
+    private Button techButton = new Button(By.xpath("//a[contains(.,'Технологии')]"));
+    private Button peopleButton = new Button(By.xpath("//a[contains(.,'Люди')]"));
+    private Label lastPeoplePost = new Label(By.xpath("//h3[@class='b-posts-1-item__title']/a"));
+    private Button autoButton = new Button(By.xpath("//a[contains(.,'Авто')]"));
+    private Button realtButton = new Button(By.xpath("//a[contains(.,'Недвижимость')]"));
+    private Button forumButton = new Button(By.xpath("(//a[contains(.,'Форум')])[2]"));
+    private Button catalogButton = new Button(By.xpath("(//a[contains(.,'Каталог и цены')])[2]"));
+    private Button baraholkaButton = new Button(By.xpath("(//a[contains(.,'Барахолка')])[2]"));
+
+    private Label mainLogo = new Label(By.className("b-top-logo"));
+
+//локаторы логина и выхода
+    private TextBox loginBox = new TextBox(By.xpath("//input[@name='username']"),"Login box");
+    private Label loginHref = new Label(By.linkText("Войти"));
+    private TextBox passBox = new TextBox(By.xpath("//input[@name='__nothing']"), "password box");
+    private Button loginButton = new Button(By.cssSelector("button.submit"),"Sign in");
+    private Label userName = new Label(By.xpath("//p[@class='user-name']/a"), "username afterlogin");
+    private Button unlogin = new Button(By.cssSelector(".exit"), "unlogin");
+//локаторы профиля
+    private Label profileStatusOnline = new Label(By.xpath("//p[@class='uprofile-connect user-status']/span"));
+    private Button editProfileButton = new Button(By.linkText("Редактировать личные данные"));
+    private Button submitProfile = new Button(By.xpath(".//div[@class='btn']/button[@type='submit']/span/span"));
+//поля личных данных
+    private TextBox city = new TextBox(By.name("city"));
+    private TextBox occupation = new TextBox(By.name("occupation"));
+    private TextBox intersts = new TextBox(By.name("interests"));
+    private TextBox jabber = new TextBox(By.name("jabber"));
+    private TextBox site = new TextBox(By.name("website"));
+    private TextBox cityDone = new TextBox(By.xpath(".//*[@id='notedit']/div/dl[1]/dd[3]"));
+    private TextBox occupationDone = new TextBox(By.xpath(".//*[@id='notedit']/div/dl[1]/dd[4]"));
+    private TextBox interstsDone = new TextBox(By.xpath(".//*[@id='notedit']/div/dl[1]/dd[5]"));
+    private TextBox jabberDone = new TextBox(By.xpath(".//*[@id='notedit']/div/dl[2]/dd[1]/a"));
+    private TextBox siteDone = new TextBox(By.xpath(".//*[@id='notedit']/div/dl[2]/dd[2]/a"));
+
+//закладки
+    private Button bookMark = new Button(By.id("bookmark_link"),"bookmark making");
+    private Label bookmarkDelete = new Label(By.xpath("//div[@class='h-bookmark-remove']/a"), "bookmark delete button");
+//комментарий
+    private TextBox commentTB = new TextBox(By.xpath("//textarea[@class='text-editor postmessage markItUpEditor']"),"coment text box");
+    private Button commentButton = new Button(By.xpath("//div[@class='b-comments-form-button']/button"),"comment button");
+    private Label postedComment = new Label(By.xpath("//a[contains(.,'Редактировать')]"),"my comment");
+
+    public void assertProfile(String cityParam,
+                              String occupationParam,
+                              String interestsParam,
+                              String jabberParam,
+                              String siteParam
+                             ) {
+        assertEquals(cityParam,cityDone);
+        assertEquals(occupationParam,occupationDone);
+        assertEquals(interestsParam,interstsDone);
+        assertEquals(jabberParam,jabberDone);
+        assertEquals(siteParam,siteDone);
+
+    }
+
+    public void editProfile(String cityParam,
+                            String occupationParam,
+                            String interestsParam,
+                            String jabberParam,
+                            String siteParam
+                            )   {
+        editProfileButton.click();
+        city.type(cityParam);
+        occupation.type(occupationParam);
+        intersts.type(interestsParam);
+        jabber.type(jabberParam);
+        site.type(siteParam);
+        submitProfile.click();
+    }
+
+    public void assertProfileStatus()  {
+        assertEquals(profileStatusOnline.getText(),"Онлайн");
+    }
+//открывает страницу профиля
+    public void profileOpen()   {
+        userName.click();
+        browser.waitForPageToLoad();
+    }
+//успешно ищет только что запощенный коментарий
+    public void assertComment()  {
+        assert(postedComment.isPresent(6));
+    }
+//постит комментарий
+    public void comment(String text)    {
+        commentTB.type(text);
+        commentButton.click();
+        browser.waitForPageToLoad();
+    }
+//открывает самый первый пост в новостях, не принципиально какой пост – главное что можно писать комменты
+    public void openNewsPost()  {
+        lastPeoplePost.click();
+        browser.waitForPageToLoad();
+    }
+
+    public void assertBookmark()    {
+        assert(bookmarkDelete.isPresent());
+    }
+
+    public void makeBookmark()  {
+        bookMark.click();
+    }
+
+    public void deleteBookmark()   {
+        bookmarkDelete.click();
+    }
+    public void openSearch()    {
+        searchResultCatalog.click();
+    }
+
+    public void openCatalog() {
+        catalogButton.click();
+        browser.waitForPageToLoad();
+        assertEquals("http://catalog.onliner.by/",browser.getLocation());
+    }
+    public void openTech() {
+        techButton.click();
+        browser.waitForPageToLoad();
+        assertEquals("http://tech.onliner.by/",browser.getLocation());
+    }
+    public void openAuto() {
+        autoButton.click();
+        browser.waitForPageToLoad();
+        assertEquals("http://auto.onliner.by/",browser.getLocation());
+    }
+    public void openPeople() {
+        peopleButton.click();
+        browser.waitForPageToLoad();
+        assertEquals("http://people.onliner.by/",browser.getLocation());
+    }
+    public void openRealt() {
+        realtButton.click();
+        browser.waitForPageToLoad();
+        assertEquals("http://realt.onliner.by/",browser.getLocation());
+    }
+    public void openBarah() {
+        baraholkaButton.click();
+        browser.waitForPageToLoad();
+        assertEquals("http://baraholka.onliner.by/",browser.getLocation());
+    }
+    public void openForum() {
+        forumButton.click();
+        browser.waitForPageToLoad();
+        assertEquals("http://forum.onliner.by/",browser.getLocation());
+    }
+
+    public void assertLogo(){
+        assert(mainLogo.isPresent());
+    }
+
+    public void assertUnlogin() {
+        assert(loginHref.isPresent());
+    }
+
+    public void unlogin() {
+        unlogin.click();
+    }
+
+    public void assertLogin(String login)   {
+        assertEquals(login,userName.getText());
+    }
+
+    public void login(String login, String password) {
+        loginBox.type(login);
+        passBox.click();
+        passBox = new TextBox(By.xpath("//input[@name='password']"),"Password box");
+        passBox.type(password);
+        loginButton.click();
+    }
+
+    public void searchInCatalog(String text) {
+        searchCatalogBtn.click();
+        searchBox.type(text);
+        searchButton.click();
+    }
+
+    public void searchInBarahoka(String text) {
+        searchBaraholkaBtn.click();
+        searchBox.type(text);
+        searchButton.click();
+    }
+
+    public void searchInForum(String text) {
+        searchForumBtn.click();
+        searchBox.type(text);
+        searchButton.click();
+    }
+
+    public void searchInNews(String text) {
+        searchNewsBtn.click();
+        searchBox.type(text);
+        searchButton.click();
+    }
+
+    public void searchAssertCatalog(String searchText) {
+        assert(searchResultCatalog.getText().contains(searchText));
+    }
+
+    public void searchAssertBaraholka() {
+        assert(searchResultBaraholka.isPresent());
+    }
+
+    public void searchAssertForum() {
+        assert(searchResultForum.isPresent());
+    }
+
+    public void searchAssertNews() {
+        assert(searchResultNews.isPresent());
+    }
+
+    public onlinerMainForm() {
+        super(By.xpath(formlocator), "My onlIner form");
+    }
+
+}

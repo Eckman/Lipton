@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Demo Test Plan" verbose="1">
+
+    <test name="Login test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerLoginTest" />
+        </classes>
+    </test>
+
+
+    <test name="Catalog Search test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerCatalogSearchTest" />
+        </classes>
+    </test>
+
+    <test name="Baraholka Search test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerBaraholkaSearchTest" />
+        </classes>
+    </test>
+
+    <test name="Forum Search test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerForumSearchTest" />
+        </classes>
+    </test>
+
+    <test name="News Search test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerNewsSearchTest" />
+        </classes>
+    </test>
+
+    <test name="Main links test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerMainLinksTest" />
+        </classes>
+    </test>
+
+    <test name="Bookmarks test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerBookmarksTest" />
+        </classes>
+    </test>
+
+    <test name="Comment test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerCommentTest" />
+        </classes>
+    </test>
+
+    <test name="Status test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerStatusTest" />
+        </classes>
+    </test>
+
+    <test name="User Parameters test" preserve-order="true">
+        <classes>
+            <class name="demo.test.onlinerUserParameters" />
+        </classes>
+    </test>
+
+    <parameter name="login"  value="rbhbokka"/>
+    <parameter name="password"  value="430943ll"/>
+
+    <parameter name="searchText1" value="iPhone"/>
+
+    <parameter name="testTextComment" value="борода, хоккей, картошка"/>
+
+    <parameter name="city"  value="Минск"/>
+    <parameter name="occupation"  value="IT"/>
+    <parameter name="interests"  value="скейтбординг"/>
+    <parameter name="jabber"  value="rbhbokka@xdsl.by"/>
+    <parameter name="site"  value="http://onliner.by"/>
+
+
+
+
+</suite>
